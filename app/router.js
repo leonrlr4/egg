@@ -5,6 +5,7 @@
  */
 module.exports = app => {
   const { router, controller } = app;
+  router.get('/xd', controller.home.server_test);
   router.get('/', controller.home.index);
   router.get('/:id', controller.home.index);
   router.get('/news', controller.news.index);
@@ -12,4 +13,5 @@ module.exports = app => {
   //動態路由
   router.get('/news-list/:id', controller.news.newsList);
   router.get('/admin', controller.admin.index);
+  
 };
